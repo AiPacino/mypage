@@ -1,5 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>AiPacino</title><link href="http://rpoor.com/" rel="alternate"></link><link href="http://rpoor.com/feeds/all.atom.xml" rel="self"></link><id>http://rpoor.com/</id><updated>2015-03-12T11:21:00+08:00</updated><entry><title>推送分支到gitcafe和github</title><link href="http://rpoor.com/push-branch-github-gitcafe.html" rel="alternate"></link><updated>2015-03-12T11:21:00+08:00</updated><author><name>AiPacino</name></author><id>tag:rpoor.com,2015-03-12:push-branch-github-gitcafe.html</id><summary type="html">&lt;dl class="docutils"&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>AiPacino</title><link href="http://rpoor.com/" rel="alternate"></link><link href="http://rpoor.com/feeds/all.atom.xml" rel="self"></link><id>http://rpoor.com/</id><updated>2015-03-12T11:21:00+08:00</updated><entry><title>centos安装字体</title><link href="http://rpoor.com/centos-fonts.html" rel="alternate"></link><updated>2015-03-12T11:21:00+08:00</updated><author><name>AiPacino</name></author><id>tag:rpoor.com,2015-03-12:centos-fonts.html</id><summary type="html">&lt;div class="section" id="id1"&gt;
+&lt;h2&gt;简介&lt;/h2&gt;
+&lt;p&gt;CentOS是目前最流行的操作系统之一，不过&amp;#8220;五花肉&amp;#8220;不太喜欢他的字体。那么，怎样往CentOS中添加自己喜爱的字体呢？&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id2"&gt;
+&lt;h2&gt;找到自己喜欢的字体&lt;/h2&gt;
+&lt;p&gt;从网上找到自己喜欢的字体，最好是&amp;#8220;otf&amp;#8220;格式的字体.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="fonts"&gt;
+&lt;h2&gt;复制字体到fonts文件夹&lt;/h2&gt;
+&lt;p&gt;将要的字体复制到/usr/share/fonts/目录下,推荐新建一个文件夹来区分字体.&amp;nbsp;例如你下载了雅黑的字体就新建一个文件夹yahei&lt;/p&gt;
+&lt;blockquote&gt;
+&amp;#8220;/usr/share/fonts/yahei/雅黑.otf&amp;#8220;&lt;/blockquote&gt;
+&lt;p&gt;最后应该像上面这种样式.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="yahei"&gt;
+&lt;h2&gt;进入yahei文件夹&lt;/h2&gt;
+&lt;p&gt;进入文件夹之后，执行下面的指令操作。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;dl class="docutils"&gt;
+&lt;dt&gt;::&lt;/dt&gt;
+&lt;dd&gt;mkfontscale
+mkfontdir
+fc-cache&amp;nbsp;-fv&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id3"&gt;
+&lt;h2&gt;重新启动电脑&lt;/h2&gt;
+&lt;p&gt;在命令行中输入&amp;#8220;reboot&amp;#8220;，大功告成，&amp;#8220;五花肉&amp;#8220;终于可以快乐的使用centos了.&lt;/p&gt;
+&lt;/div&gt;
+</summary><category term="centos"></category><category term="fonts"></category><category term="字体"></category><category term="安装"></category></entry><entry><title>推送分支到gitcafe和github</title><link href="http://rpoor.com/push-branch-github-gitcafe.html" rel="alternate"></link><updated>2015-03-12T11:21:00+08:00</updated><author><name>AiPacino</name></author><id>tag:rpoor.com,2015-03-12:push-branch-github-gitcafe.html</id><summary type="html">&lt;dl class="docutils"&gt;
 &lt;dt&gt;[core]&lt;/dt&gt;
 &lt;dd&gt;repositoryformatversion = 0
 filemode = true
