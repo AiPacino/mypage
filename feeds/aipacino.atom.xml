@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>AiPacino</title><link href="http://rpoor.com/" rel="alternate"></link><link href="http://rpoor.com/feeds/aipacino.atom.xml" rel="self"></link><id>http://rpoor.com/</id><updated>2015-03-12T11:21:00+08:00</updated><entry><title>推送分支到gitcafe和github</title><link href="http://rpoor.com/push-brand-github-gitcafe.html" rel="alternate"></link><updated>2015-03-12T11:21:00+08:00</updated><author><name>AiPacino</name></author><id>tag:rpoor.com,2015-03-12:push-brand-github-gitcafe.html</id><summary type="html">&lt;dl class="docutils"&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>AiPacino</title><link href="http://rpoor.com/" rel="alternate"></link><link href="http://rpoor.com/feeds/aipacino.atom.xml" rel="self"></link><id>http://rpoor.com/</id><updated>2015-03-12T11:21:00+08:00</updated><entry><title>推送分支到gitcafe和github</title><link href="http://rpoor.com/push-branch-github-gitcafe.html" rel="alternate"></link><updated>2015-03-12T11:21:00+08:00</updated><author><name>AiPacino</name></author><id>tag:rpoor.com,2015-03-12:push-branch-github-gitcafe.html</id><summary type="html">&lt;dl class="docutils"&gt;
 &lt;dt&gt;[core]&lt;/dt&gt;
 &lt;dd&gt;repositoryformatversion = 0
 filemode = true
