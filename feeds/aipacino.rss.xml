@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>AiPacino</title><link>http://rpoor.com/</link><description>学会整理自己的经验是科研的第一步。</description><atom:link href="http://rpoor.com/feeds/aipacino.rss.xml" rel="self"></atom:link><lastBuildDate>Thu, 12 Mar 2015 11:21:00 +0800</lastBuildDate><item><title>推送分支到gitcafe和github</title><link>http://rpoor.com/push-brand-github-gitcafe.html</link><description>&lt;dl class="docutils"&gt;
+&lt;dt&gt;[core]&lt;/dt&gt;
+&lt;dd&gt;repositoryformatversion = 0
+filemode = true
+bare = false
+logallrefupdates =&amp;nbsp;true&lt;/dd&gt;
+&lt;dt&gt;[remote&amp;nbsp;&amp;quot;github&amp;quot;]&lt;/dt&gt;
+&lt;dd&gt;url = &lt;a class="reference external" href="mailto:git&amp;#64;github.com"&gt;git&amp;#64;github.com&lt;/a&gt;:AiPacino/aipacino.github.com.git
+fetch = +refs/heads/&lt;em&gt;:refs/remotes/github/&lt;/em&gt;&lt;/dd&gt;
+&lt;dt&gt;[remote&amp;nbsp;&amp;quot;gitcafe&amp;quot;]&lt;/dt&gt;
+&lt;dd&gt;url = &lt;a class="reference external" href="mailto:git&amp;#64;gitcafe.com"&gt;git&amp;#64;gitcafe.com&lt;/a&gt;:AiPacino/AiPacino.git
+fetch = +refs/heads/&lt;em&gt;:refs/remotes/gitcafe/&lt;/em&gt;&lt;/dd&gt;
+&lt;dt&gt;[branch&amp;nbsp;&amp;quot;master&amp;quot;]&lt;/dt&gt;
+&lt;dd&gt;remote = origin
+merge =&amp;nbsp;refs/heads/master&lt;/dd&gt;
+&lt;dt&gt;[alias]&lt;/dt&gt;
+&lt;dd&gt;publish = !sh -c &amp;quot;git push github master &amp;amp;&amp;amp; git push gitcafe&amp;nbsp;master:gitcafe-pages&amp;quot;&lt;/dd&gt;
+&lt;/dl&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">AiPacino</dc:creator><pubDate>Thu, 12 Mar 2015 11:21:00 +0800</pubDate><guid>tag:rpoor.com,2015-03-12:push-brand-github-gitcafe.html</guid><category>github</category><category>gitcafe</category><category>brand</category><category>push</category></item><item><title>Hello World!</title><link>http://rpoor.com/hello-world.html</link><description>&lt;p&gt;Hello&amp;nbsp;World！欢迎来到SeisMan的个人独立博客。&lt;/p&gt;
+&lt;p&gt;本博客主要关注地震学的基础知识、地震学相关软件以及一些编程语言与工具。&lt;/p&gt;
+&lt;p&gt;本博客使用基于&lt;a class="reference external" href="https://www.python.org"&gt;Python&lt;/a&gt;的&lt;a class="reference external" href="https://github.com/getpelican/pelican"&gt;Pelican&lt;/a&gt;作为静态博客生成器，主题为&lt;a class="reference external" href="https://github.com/talha131/pelican-elegant"&gt;Elegant&lt;/a&gt;，源文件使用&lt;a class="reference external" href="http://docutils.sourceforge.net/rst.html"&gt;reStructuredText&lt;/a&gt;作为标记语言。博客源文件托管在&lt;a class="reference external" href="https://github.com"&gt;GitHub&lt;/a&gt;上，生成的网页文件同时托管在&lt;a class="reference external" href="https://github.com"&gt;GitHub&lt;/a&gt;（供国外用户访问）以及&lt;a class="reference external" href="https://gitcafe.com"&gt;GitCafe&lt;/a&gt;（供国内用户访问）。在此一并对这些开源且免费的服务表示感谢。&lt;/p&gt;
+&lt;p&gt;首次访问本博客的读者可能对于博客以及博主的一些信息感兴趣，这些可以在“&lt;a class="reference external" href="http://rpoor.com/about.html"&gt;About&lt;/a&gt;”页面中看到，其中还包含了博客的原则、版权以及联系方式。&lt;/p&gt;
+&lt;p&gt;如果觉得本博客的内容对你有用，可以进入“&lt;a class="reference external" href="http://rpoor.com/donations.html"&gt;Donations&lt;/a&gt;”页面，通过多种方式捐赠本博客。&lt;/p&gt;
+&lt;p&gt;欢迎继续关注和支持SeisMan博客。&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">AiPacino</dc:creator><pubDate>Sat, 13 Sep 2014 00:00:00 +0800</pubDate><guid>tag:rpoor.com,2013-06-21:hello-world.html</guid><category>博客</category></item></channel></rss>
