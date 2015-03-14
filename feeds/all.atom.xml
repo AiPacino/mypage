@@ -47,7 +47,84 @@ merge =&amp;nbsp;refs/heads/master&lt;/dd&gt;
 &lt;dt&gt;[alias]&lt;/dt&gt;
 &lt;dd&gt;publish = !sh -c &amp;quot;git push github master &amp;amp;&amp;amp; git push gitcafe&amp;nbsp;master:gitcafe-pages&amp;quot;&lt;/dd&gt;
 &lt;/dl&gt;
-</summary><category term="github"></category><category term="gitcafe"></category><category term="brand"></category><category term="push"></category></entry><entry><title>Global CMT信息整理</title><link href="http://rpoor.com/global-cmt.html" rel="alternate"></link><updated>2014-07-01T00:15:00+08:00</updated><author><name>SeisMan</name></author><id>tag:rpoor.com,2014-07-01:global-cmt.html</id><summary type="html">
+</summary><category term="github"></category><category term="gitcafe"></category><category term="brand"></category><category term="push"></category></entry><entry><title>Hello2</title><link href="http://rpoor.com/hello.html" rel="alternate"></link><updated>2014-09-24T02:06:00+08:00</updated><author><name>mcsrainbow</name></author><id>tag:rpoor.com,2014-09-24:hello.html</id><summary type="html">&lt;p&gt;1.Install libs
+2.Download haroopad
+3.Install haroopad
+4.Repair desktop&amp;nbsp;icon&lt;/p&gt;
+&lt;p&gt;1.Install&amp;nbsp;libs&lt;/p&gt;
+&lt;p&gt;sudo yum install systemd-libs.i686&amp;nbsp;-y&lt;/p&gt;
+&lt;p&gt;2.Download&amp;nbsp;haroopad&lt;/p&gt;
+&lt;p&gt;goto haroopad1 download bin&amp;nbsp;packages.&lt;/p&gt;
+&lt;p&gt;http://pad.haroopress.com/user.html&lt;/p&gt;
+&lt;p&gt;wget&amp;nbsp;https://bitbucket.org/rhiokim/haroopad-download/downloads/haroopad-v0.12.2_amd64.tar.gz&lt;/p&gt;
+&lt;p&gt;3.Install&amp;nbsp;haroopad&lt;/p&gt;
+&lt;p&gt;tar -zxvf haroopad-v0.12.2_amd64.tar.gz
+tar -zxvf data.tar.gz
+sudo cp ./usr&amp;nbsp;/&lt;/p&gt;
+&lt;p&gt;tar zxf control.tar.gz
+chmod 755 postinst
+sudo&amp;nbsp;./postinst&lt;/p&gt;
+&lt;p&gt;4.Repair desktop&amp;nbsp;icon&lt;/p&gt;
+&lt;p&gt;sudo vi&amp;nbsp;/usr/share/applications/Haroopad.desktop&lt;/p&gt;
+&lt;p&gt;replace icon&amp;nbsp;value:/usr/share/icons/hicolor/128x128/apps/haroopad.png&lt;/p&gt;
+&lt;p&gt;[Desktop Entry]
+Name=haroopad
+Version=0.12.2
+Exec=haroopad
+Comment=The Next Document processor based on Markdown
+Icon=/usr/share/icons/hicolor/128x128/apps/haroopad.png
+Type=Application
+Terminal=false
+StartupNotify=true
+Encoding=&lt;span class="caps"&gt;UTF&lt;/span&gt;-8
+Categories=Development;&lt;span class="caps"&gt;GTK&lt;/span&gt;;&lt;span class="caps"&gt;GNOME&lt;/span&gt;;&lt;/p&gt;
+&lt;p&gt;效果图&lt;/p&gt;
+&lt;p&gt;about author | support&amp;nbsp;author&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;Haroopad是一款Linux上的markdown编辑器，使用Chromium作为UI，支持Windows、Mac OS X和Linux。主题样式丰富，语法标亮支持54种编程语言，如上图所示，一边是代码编辑窗口，一边是预览窗口，可以实时更新。其邮件导出功能可以将文档发送到Tumblr和Evernote。 ↩
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h1 id="mdmarkdownfedoraharoopadeditorlinux"&gt;md#markdown#fedora#haroopad#editor#linux&lt;/h1&gt;
+&lt;p&gt;最新最早最热&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;0条评论
+
+还没有评论，沙发等你来抢
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;社交帐号登录:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;微博
+QQ
+人人
+豆瓣
+更多»
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;www.bonashen.com正在使用多说
+© 2013 Bona Shen&amp;#8217;s Blog | designed by veganshe | on FarBox
+to&amp;nbsp;Top&lt;/p&gt;</summary><category term="Pelican"></category><category term="Markdown"></category></entry><entry><title>Hello1</title><link href="http://rpoor.com/hello1.html" rel="alternate"></link><updated>2014-09-24T02:06:00+08:00</updated><author><name>mcsrainbow</name></author><id>tag:rpoor.com,2014-09-24:hello1.html</id><summary type="html">&lt;h1 id="ansible"&gt;五花肉大冒险之《ansible》&lt;/h1&gt;
+&lt;p&gt;Title: ansible
+Date: March 14, 2015 9:16 &lt;span class="caps"&gt;PM&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;五花肉手下有十几台主机还有两个服务器,有时候想要在主机上同时安装某一个软件，可把五花肉忙坏了,在这个主机上装完在另一个上接着重复再执行一次相同的动作,有一个五花肉想要部署一下oracle,直接就崩溃了.&lt;/p&gt;
+&lt;p&gt;所以,五花肉就想有没有一个软件可以让五花肉同时操控十几台电脑执行相同的操作。&lt;/p&gt;
+&lt;p&gt;功夫不负有心人,终于让无花肉找到了ansible这个运维软件。&lt;/p&gt;
+&lt;p&gt;让我们一起跟着五花肉看看他是怎么使用ansible的。&lt;/p&gt;
+&lt;p&gt;ansible all -a &amp;#8220;/bin/echo&amp;nbsp;hello&amp;#8221;&lt;/p&gt;
+&lt;p&gt;ansible all -m copy -a &amp;#8220;src=/run/media/AiPacino/&lt;span class="caps"&gt;3A5D&lt;/span&gt;-0F83/cloudera-cdh-5-0.x86_64.rpm&amp;nbsp;dest=/home/AiPacino/下载&amp;#8221;&lt;/p&gt;
+&lt;p&gt;ansible all -a &amp;#8220;java&amp;nbsp;-version&amp;#8221;&lt;/p&gt;</summary><category term="Pelican"></category><category term="Markdown"></category></entry><entry><title>Hello3</title><link href="http://rpoor.com/hello3.html" rel="alternate"></link><updated>2014-09-24T02:06:00+08:00</updated><author><name>mcsrainbow</name></author><id>tag:rpoor.com,2014-09-24:hello3.html</id><summary type="html">&lt;h1 id="_1"&gt;五花肉的内心独白&lt;/h1&gt;
+&lt;p&gt;Title: the-word-heart
+Date: March 14, 2015 8:55 &lt;span class="caps"&gt;PM&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;本来今天想酝酿一下感情，写一首忧伤的诗的，后来想了想，还是算了吧，现在时间太紧迫了，忧伤太耗费时间了，五花肉忧伤不起啊，给大家共享一下我最喜欢的一个短文吧，仅以此文来纪念我即将失去的青春。&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;看看这过往
+或许是美好的时光
+亦或是不羁的岁月
+都是我们一起逝去的青春
+过去的，总是美好的&amp;nbsp;你好，旧时光&amp;#8230;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;时间过的真快，五花肉现在都恨不得自己可以变成超人。&lt;/p&gt;
+&lt;p&gt;今天就当是自己没事的闲言碎语吧，大家见谅！&lt;/p&gt;</summary><category term="Pelican"></category><category term="Markdown"></category></entry><entry><title>Global CMT信息整理</title><link href="http://rpoor.com/global-cmt.html" rel="alternate"></link><updated>2014-07-01T00:15:00+08:00</updated><author><name>SeisMan</name></author><id>tag:rpoor.com,2014-07-01:global-cmt.html</id><summary type="html">
 &lt;div class="section" id="id1"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id5"&gt;简介&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Global CMT全称Global Centroid-Moment-Tensor Project，前身是Harvard &lt;span class="caps"&gt;CMT&lt;/span&gt;，是地震学常用的地震目录和震源机制之一。其给出了自1976年以来上万个地震的地震目录以及震源机制。&lt;/p&gt;
