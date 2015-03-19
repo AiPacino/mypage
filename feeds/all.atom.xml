@@ -164,38 +164,62 @@ Date: March 14, 2015 8:55 &lt;span class="caps"&gt;PM&lt;/span&gt;&lt;/p&gt;
 &lt;li&gt;GCMT目录的ASCII文件中震级采用mb和/或MS，为什么不用矩震级？使用面波和体波震级的最大问题是震级饱和，导致震级基本不会超过8级。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-</summary><category term="地震目录"></category><category term="震源机制解"></category><category term="震级"></category></entry><entry><title>Firefox安装Java插件</title><link href="http://rpoor.com/java-plugin-of-firefox.html" rel="alternate"></link><updated>2013-07-11T00:43:00+08:00</updated><author><name>SeisMan</name></author><id>tag:rpoor.com,2013-07-11:java-plugin-of-firefox.html</id><summary type="html">&lt;p&gt;由于某个变态网站，需要Java插件才能使用，所以需要在Firefox上安装Java插件。在Oracle的网站上搜到解决办法，原文在&lt;a class="reference external" href="http://www.oracle.com/technetwork/java/javase/manual-plugin-install-linux-136395.html"&gt;这里&lt;/a&gt;，排版难看的要死，故而重新排版。&lt;/p&gt;
-&lt;p&gt;我的计算机环境如下：&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;操作系统：CentOS 6.4&amp;nbsp;Final&lt;/li&gt;
-&lt;li&gt;Firefox版本：17.0.7&lt;/li&gt;
-&lt;li&gt;Java版本：OpenJDK&amp;nbsp;1.7.0&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;安装步骤如下：&lt;/p&gt;
-&lt;ol class="arabic"&gt;
-&lt;li&gt;&lt;p class="first"&gt;退出Firefox；&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;卸载原来安装的Java插件（没装过就不卸了）；&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;找到Java自带的浏览器插件的位置；&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-$ locate libnpjp2
-/usr/java/jre1.7.0_21/lib/amd64/libnpjp2.so
-/usr/local/cuda-5.0/jre/lib/amd64/libnpjp2.so
-&lt;/pre&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;在firefox插件目录中建立到Java插件文件的软链接；&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-$ cd ~/.mozilla/plugins/
-$ ln -s /usr/java/jre1.7.0_21/lib/amd64/libnpjp2.so libnpjp2.so
-&lt;/pre&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;启动firefox，在地址栏输入&lt;strong&gt;about:plugins&lt;/strong&gt;，查看插件是否正常加载；&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;搞定收工。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-</summary><category term="Firefox"></category><category term="Java"></category></entry><entry><title>Perl多版本共存之Perlbrew</title><link href="http://rpoor.com/perlbrew-for-multiple-versions-of-perl.html" rel="alternate"></link><updated>2013-07-09T00:41:00+08:00</updated><author><name>SeisMan</name></author><id>tag:rpoor.com,2013-07-09:perlbrew-for-multiple-versions-of-perl.html</id><summary type="html">
+</summary><category term="地震目录"></category><category term="震源机制解"></category><category term="震级"></category></entry><entry><title></title><link href="http://rpoor.com/java-plugin-of-firefox.html" rel="alternate"></link><updated>2013-07-11T00:00:00+08:00</updated><author><name>AiPacino</name></author><id>tag:rpoor.com,2013-07-11:java-plugin-of-firefox.html</id><summary type="html">&lt;p&gt;# Linux下配置Git,Node.js+&lt;span class="caps"&gt;ITK&lt;/span&gt;+&lt;span class="caps"&gt;VTK&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;##&amp;nbsp;前言&lt;/p&gt;
+&lt;p&gt;最近帮研究生写论文,需要ITK做医学领域的开发,因为五花肉喜欢在unix架构下面开发软件,所以此文就来记录我的&lt;/p&gt;
+&lt;p&gt;###&amp;nbsp;安装Git&lt;/p&gt;
+&lt;p&gt;CentOS 7 的yum源中默认已经有git了,如果你是在centos 7下,可以跳过,&amp;nbsp;安装软件的第一步肯定要已安装依赖包&lt;/p&gt;
+&lt;blockquote&gt;
+yum install curl
+yum install curl-devel
+yum install zlib-devel
+yum install openssl-devel
+yum install perl
+yum install cpio
+yum install expat-devel
+yum install gettext-devel&lt;/blockquote&gt;
+&lt;p&gt;下载最新的Git包&lt;/p&gt;
+&lt;p&gt;wget &lt;a class="reference external" href="http://www.codemonkey.org.uk/projects/git-snapshots/git/git-latest.tar.gz"&gt;http://www.codemonkey.org.uk/projects/git-snapshots/git/git-latest.tar.gz&lt;/a&gt;
+tar xzvf git-latest.tar.gz
+cd git-2011-11-30 ＃你的目录可能不是这个
+autoconf
+./configure
+make &amp;amp;&amp;amp; make&amp;nbsp;install&lt;/p&gt;
+&lt;p&gt;检查下安装的版本&lt;/p&gt;
+&lt;p&gt;git&amp;nbsp;&amp;#8212;version&lt;/p&gt;
+&lt;p&gt;安装node.js&lt;/p&gt;
+&lt;p&gt;由于RHEL的Python版本为2.4，&amp;nbsp;而Node.js依赖Python27，所以应该先更新一下Python至Python27。&lt;/p&gt;
+&lt;p&gt;yum install openssl-devel
+yum install python27
+yum install&amp;nbsp;gcc-c++&lt;/p&gt;
+&lt;p&gt;下载并编译、安装node.js&lt;/p&gt;
+&lt;p&gt;cd /usr/local/src
+wget &lt;a class="reference external" href="http://nodejs.org/dist/node-latest.tar.gz"&gt;http://nodejs.org/dist/node-latest.tar.gz&lt;/a&gt;
+tar zxvf node-latest.tar.gz
+cd node-v0.10.18
+python2.7 configure
+make &lt;span class="caps"&gt;PYTHON&lt;/span&gt;=python2.7
+make&amp;nbsp;install&lt;/p&gt;
+&lt;p&gt;安装CMake&lt;/p&gt;
+&lt;p&gt;curl -L -k &lt;a class="reference external" href="https://github.com/Kitware/CMake/archive/master.zip"&gt;https://github.com/Kitware/CMake/archive/master.zip&lt;/a&gt; 2&amp;gt; /dev/null &amp;gt; cmake.zip
+unzip cmake.zip &amp;amp;&amp;amp; mv CMake-master CMake
+cd CMake
+./bootstrap
+make &amp;amp;&amp;amp; make&amp;nbsp;install&lt;/p&gt;
+&lt;p&gt;安装VTK&lt;/p&gt;
+&lt;p&gt;与安装CMake类似:&lt;/p&gt;
+&lt;p&gt;curl -L -k &lt;a class="reference external" href="https://github.com/Kitware/VTK/archive/master.zip"&gt;https://github.com/Kitware/&lt;span class="caps"&gt;VTK&lt;/span&gt;/archive/master.zip&lt;/a&gt; 2&amp;gt; /dev/null &amp;gt; vtk.zip
+unzip vtk.zip &amp;amp;&amp;amp; mv &lt;span class="caps"&gt;VTK&lt;/span&gt;-master &lt;span class="caps"&gt;VTK&lt;/span&gt;
+mkdir vtk-build
+cmake ../&lt;span class="caps"&gt;VTK&lt;/span&gt; -DCMake_INSTALL_PREFIX=~/lib/vtk -DBUILD_DOCUMENTATION=&lt;span class="caps"&gt;OFF&lt;/span&gt; -DBUILD_EXAMPLES=&lt;span class="caps"&gt;OFF&lt;/span&gt; -DBUILD_SHARED_LIBS=&lt;span class="caps"&gt;OFF&lt;/span&gt; -DBUILD_TESTING=&lt;span class="caps"&gt;OFF&lt;/span&gt;
+make &amp;amp;&amp;amp; make&amp;nbsp;install&lt;/p&gt;
+&lt;p&gt;安装ITK&lt;/p&gt;
+&lt;p&gt;curl -L -k &lt;a class="reference external" href="https://github.com/Kitware/ITK/archive/master.zip"&gt;https://github.com/Kitware/&lt;span class="caps"&gt;ITK&lt;/span&gt;/archive/master.zip&lt;/a&gt; 2&amp;gt; /dev/null &amp;gt; itk.zip
+unzip itk.zip &amp;amp;&amp;amp; mv &lt;span class="caps"&gt;ITK&lt;/span&gt;-master &lt;span class="caps"&gt;ITK&lt;/span&gt;
+mkdir itk-build
+cmake ../&lt;span class="caps"&gt;ITK&lt;/span&gt; -DCMake_INSTALL_PREFIX=~/lib/itk -DBUILD_DOCUMENTATION=&lt;span class="caps"&gt;OFF&lt;/span&gt; -DBUILD_EXAMPLES=&lt;span class="caps"&gt;OFF&lt;/span&gt; -DBUILD_SHARED_LIBS=&lt;span class="caps"&gt;OFF&lt;/span&gt; -DBUILD_TESTING=&lt;span class="caps"&gt;OFF&lt;/span&gt; -DModule_ITKVtkGlue=&lt;span class="caps"&gt;ON&lt;/span&gt;
+make &amp;amp;&amp;amp; make&amp;nbsp;install&lt;/p&gt;
+</summary></entry><entry><title>Perl多版本共存之Perlbrew</title><link href="http://rpoor.com/perlbrew-for-multiple-versions-of-perl.html" rel="alternate"></link><updated>2013-07-09T00:41:00+08:00</updated><author><name>SeisMan</name></author><id>tag:rpoor.com,2013-07-09:perlbrew-for-multiple-versions-of-perl.html</id><summary type="html">
 &lt;div class="section" id="id1"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id9"&gt;说明&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;推荐使用plenv作为Perl版本管理工具，不再推荐PerlBrew。plenv相比于PerlBrew更加简单也更有优势。关于plenv的介绍，参考博文《&lt;a class="reference external" href="{filename}/Programming/2013-11-03_perl-plenv.rst"&gt;Perl多版本共存之plenv&lt;/a&gt;》。&lt;/p&gt;

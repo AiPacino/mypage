@@ -47,7 +47,62 @@ merge =&amp;nbsp;refs/heads/master&lt;/dd&gt;
 &lt;dt&gt;[alias]&lt;/dt&gt;
 &lt;dd&gt;publish = !sh -c &amp;quot;git push github master &amp;amp;&amp;amp; git push gitcafe&amp;nbsp;master:gitcafe-pages&amp;quot;&lt;/dd&gt;
 &lt;/dl&gt;
-</summary><category term="github"></category><category term="gitcafe"></category><category term="brand"></category><category term="push"></category></entry><entry><title>Hello World!</title><link href="http://rpoor.com/hello-world.html" rel="alternate"></link><updated>2014-09-13T00:00:00+08:00</updated><author><name>AiPacino</name></author><id>tag:rpoor.com,2013-06-21:hello-world.html</id><summary type="html">&lt;p&gt;Hello&amp;nbsp;World！欢迎来到SeisMan的个人独立博客。&lt;/p&gt;
+</summary><category term="github"></category><category term="gitcafe"></category><category term="brand"></category><category term="push"></category></entry><entry><title></title><link href="http://rpoor.com/java-plugin-of-firefox.html" rel="alternate"></link><updated>2013-07-11T00:00:00+08:00</updated><author><name>AiPacino</name></author><id>tag:rpoor.com,2013-07-11:java-plugin-of-firefox.html</id><summary type="html">&lt;p&gt;# Linux下配置Git,Node.js+&lt;span class="caps"&gt;ITK&lt;/span&gt;+&lt;span class="caps"&gt;VTK&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;##&amp;nbsp;前言&lt;/p&gt;
+&lt;p&gt;最近帮研究生写论文,需要ITK做医学领域的开发,因为五花肉喜欢在unix架构下面开发软件,所以此文就来记录我的&lt;/p&gt;
+&lt;p&gt;###&amp;nbsp;安装Git&lt;/p&gt;
+&lt;p&gt;CentOS 7 的yum源中默认已经有git了,如果你是在centos 7下,可以跳过,&amp;nbsp;安装软件的第一步肯定要已安装依赖包&lt;/p&gt;
+&lt;blockquote&gt;
+yum install curl
+yum install curl-devel
+yum install zlib-devel
+yum install openssl-devel
+yum install perl
+yum install cpio
+yum install expat-devel
+yum install gettext-devel&lt;/blockquote&gt;
+&lt;p&gt;下载最新的Git包&lt;/p&gt;
+&lt;p&gt;wget &lt;a class="reference external" href="http://www.codemonkey.org.uk/projects/git-snapshots/git/git-latest.tar.gz"&gt;http://www.codemonkey.org.uk/projects/git-snapshots/git/git-latest.tar.gz&lt;/a&gt;
+tar xzvf git-latest.tar.gz
+cd git-2011-11-30 ＃你的目录可能不是这个
+autoconf
+./configure
+make &amp;amp;&amp;amp; make&amp;nbsp;install&lt;/p&gt;
+&lt;p&gt;检查下安装的版本&lt;/p&gt;
+&lt;p&gt;git&amp;nbsp;&amp;#8212;version&lt;/p&gt;
+&lt;p&gt;安装node.js&lt;/p&gt;
+&lt;p&gt;由于RHEL的Python版本为2.4，&amp;nbsp;而Node.js依赖Python27，所以应该先更新一下Python至Python27。&lt;/p&gt;
+&lt;p&gt;yum install openssl-devel
+yum install python27
+yum install&amp;nbsp;gcc-c++&lt;/p&gt;
+&lt;p&gt;下载并编译、安装node.js&lt;/p&gt;
+&lt;p&gt;cd /usr/local/src
+wget &lt;a class="reference external" href="http://nodejs.org/dist/node-latest.tar.gz"&gt;http://nodejs.org/dist/node-latest.tar.gz&lt;/a&gt;
+tar zxvf node-latest.tar.gz
+cd node-v0.10.18
+python2.7 configure
+make &lt;span class="caps"&gt;PYTHON&lt;/span&gt;=python2.7
+make&amp;nbsp;install&lt;/p&gt;
+&lt;p&gt;安装CMake&lt;/p&gt;
+&lt;p&gt;curl -L -k &lt;a class="reference external" href="https://github.com/Kitware/CMake/archive/master.zip"&gt;https://github.com/Kitware/CMake/archive/master.zip&lt;/a&gt; 2&amp;gt; /dev/null &amp;gt; cmake.zip
+unzip cmake.zip &amp;amp;&amp;amp; mv CMake-master CMake
+cd CMake
+./bootstrap
+make &amp;amp;&amp;amp; make&amp;nbsp;install&lt;/p&gt;
+&lt;p&gt;安装VTK&lt;/p&gt;
+&lt;p&gt;与安装CMake类似:&lt;/p&gt;
+&lt;p&gt;curl -L -k &lt;a class="reference external" href="https://github.com/Kitware/VTK/archive/master.zip"&gt;https://github.com/Kitware/&lt;span class="caps"&gt;VTK&lt;/span&gt;/archive/master.zip&lt;/a&gt; 2&amp;gt; /dev/null &amp;gt; vtk.zip
+unzip vtk.zip &amp;amp;&amp;amp; mv &lt;span class="caps"&gt;VTK&lt;/span&gt;-master &lt;span class="caps"&gt;VTK&lt;/span&gt;
+mkdir vtk-build
+cmake ../&lt;span class="caps"&gt;VTK&lt;/span&gt; -DCMake_INSTALL_PREFIX=~/lib/vtk -DBUILD_DOCUMENTATION=&lt;span class="caps"&gt;OFF&lt;/span&gt; -DBUILD_EXAMPLES=&lt;span class="caps"&gt;OFF&lt;/span&gt; -DBUILD_SHARED_LIBS=&lt;span class="caps"&gt;OFF&lt;/span&gt; -DBUILD_TESTING=&lt;span class="caps"&gt;OFF&lt;/span&gt;
+make &amp;amp;&amp;amp; make&amp;nbsp;install&lt;/p&gt;
+&lt;p&gt;安装ITK&lt;/p&gt;
+&lt;p&gt;curl -L -k &lt;a class="reference external" href="https://github.com/Kitware/ITK/archive/master.zip"&gt;https://github.com/Kitware/&lt;span class="caps"&gt;ITK&lt;/span&gt;/archive/master.zip&lt;/a&gt; 2&amp;gt; /dev/null &amp;gt; itk.zip
+unzip itk.zip &amp;amp;&amp;amp; mv &lt;span class="caps"&gt;ITK&lt;/span&gt;-master &lt;span class="caps"&gt;ITK&lt;/span&gt;
+mkdir itk-build
+cmake ../&lt;span class="caps"&gt;ITK&lt;/span&gt; -DCMake_INSTALL_PREFIX=~/lib/itk -DBUILD_DOCUMENTATION=&lt;span class="caps"&gt;OFF&lt;/span&gt; -DBUILD_EXAMPLES=&lt;span class="caps"&gt;OFF&lt;/span&gt; -DBUILD_SHARED_LIBS=&lt;span class="caps"&gt;OFF&lt;/span&gt; -DBUILD_TESTING=&lt;span class="caps"&gt;OFF&lt;/span&gt; -DModule_ITKVtkGlue=&lt;span class="caps"&gt;ON&lt;/span&gt;
+make &amp;amp;&amp;amp; make&amp;nbsp;install&lt;/p&gt;
+</summary></entry><entry><title>Hello World!</title><link href="http://rpoor.com/hello-world.html" rel="alternate"></link><updated>2014-09-13T00:00:00+08:00</updated><author><name>AiPacino</name></author><id>tag:rpoor.com,2013-06-21:hello-world.html</id><summary type="html">&lt;p&gt;Hello&amp;nbsp;World！欢迎来到SeisMan的个人独立博客。&lt;/p&gt;
 &lt;p&gt;本博客主要关注地震学的基础知识、地震学相关软件以及一些编程语言与工具。&lt;/p&gt;
 &lt;p&gt;本博客使用基于&lt;a class="reference external" href="https://www.python.org"&gt;Python&lt;/a&gt;的&lt;a class="reference external" href="https://github.com/getpelican/pelican"&gt;Pelican&lt;/a&gt;作为静态博客生成器，主题为&lt;a class="reference external" href="https://github.com/talha131/pelican-elegant"&gt;Elegant&lt;/a&gt;，源文件使用&lt;a class="reference external" href="http://docutils.sourceforge.net/rst.html"&gt;reStructuredText&lt;/a&gt;作为标记语言。博客源文件托管在&lt;a class="reference external" href="https://github.com"&gt;GitHub&lt;/a&gt;上，生成的网页文件同时托管在&lt;a class="reference external" href="https://github.com"&gt;GitHub&lt;/a&gt;（供国外用户访问）以及&lt;a class="reference external" href="https://gitcafe.com"&gt;GitCafe&lt;/a&gt;（供国内用户访问）。在此一并对这些开源且免费的服务表示感谢。&lt;/p&gt;
 &lt;p&gt;首次访问本博客的读者可能对于博客以及博主的一些信息感兴趣，这些可以在“&lt;a class="reference external" href="http://rpoor.com/about.html"&gt;About&lt;/a&gt;”页面中看到，其中还包含了博客的原则、版权以及联系方式。&lt;/p&gt;
